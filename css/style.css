@@ -11,9 +11,8 @@ body {
   background-repeat: no-repeat;
 }
 
-input {
-  padding: 10px 5px;
-  border-radius: 5px;
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 .mb-20 {
@@ -24,6 +23,10 @@ input {
   padding: 20px;
 }
 
+.pb-50 {
+  padding-bottom: 50px;
+}
+
 .flex {
   display: flex;
 }
@@ -31,10 +34,6 @@ input {
 .true-center {
   justify-content: center;
   align-items: center;
-}
-
-.pb-50 {
-  padding-bottom: 50px;
 }
 
 .justify-end {
@@ -66,17 +65,27 @@ input {
   width: 100%;
 }
 
+.box-shadow {
+  box-shadow: 7px 7px 8px -3px rgba(0,0,0,0.87);
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 .dismiss {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 3px;
-  border-radius: 50%;
-  border: 1px solid black;
+  font-weight: bold;
+  font-size: 24px;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
   cursor: pointer;
 }
 
-.user-full-name,
 .tab-container {
   height: 40px;
   padding: 0 10px;
@@ -87,25 +96,34 @@ input {
   border-bottom: 2px solid gray;
 }
 
+.post-area {
+  min-height: 200px;
+}
+
+.image-input {
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
 .main-row > * {
   align-self: flex-start;
 }
 
 .user-full-name {
-  margin: 0 0 20px 0;
+  margin: 10px;
+  padding: 5px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
 }
 
 .image {
   object-fit: cover;
   object-position: center;
+  max-height: 400px;
 }
 
 .image-gallery-item {
   height: 250px;
-}
-
-.profile-image {
-  max-height: 300px;
 }
 
 .tab {
@@ -115,6 +133,7 @@ input {
   border-radius: 5% 5% 0 0;
   overflow: hidden;
   transition: .5s;
+  margin: 0 10px;
   cursor: pointer;
 }
 
@@ -126,14 +145,6 @@ input {
 .tab.active {
   background-color: white;
   color: black;
-}
-
-.card {
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 7px 7px 8px -3px rgba(0,0,0,0.87);
-  overflow: hidden;
 }
 
 .btn {
@@ -156,6 +167,10 @@ input {
   box-shadow: 1px 1px 1px 1px;
 }
 
+.submit-btn {
+  margin: 0 10px;
+}
+
 .modal-container {
   height: 100vh;
   width: 100%;
@@ -170,7 +185,7 @@ input {
 
 .modal {
   position: relative;
-  width: 50%;
+  width: 30%;
   padding: 30px;
   border-radius: 5px;
   background-color: white;

@@ -13,14 +13,11 @@
   <main class="container p-20">
     <div class="row justify-evenly main-row">
       <div class="col-3 row justify-evenly">
-        <h2 class="user-full-name card col-11 mb-20 flex true-center" id="profileName"></h2>
-        <div class="card col-11 mb-20 flex justify-evenly">
-          <button class="btn" id="addPostButton">Add Blog Entry</button>
-          <button class="btn" id="addImageButton">Add Image</button>
-        </div>
-        <div class="card col-11">
-          <img src="images/headshot.jpg" alt="Profile Image" class="col-12 mb-20 image profile-image" id="profileImage">
+        <img src="images/headshot.jpg" alt="Profile Image" class="col-11 mb-20 card box-shadow image profile-image"
+          id="profileImage">
+        <div class="card box-shadow col-11 mb-20">
           <div class="about-container col-12">
+            <h2 class="user-full-name flex true-center" id="profileName"></h2>
             <p class="row justify-between"><span class="bold">Age:</span><span id="profileAge"></span></p>
             <p class="row justify-between"><span class="bold">Gender:</span><span id="profileGender"></span></p>
             <p class="row justify-between"><span class="bold">Location:</span><span id="profileLocation"></span></p>
@@ -28,13 +25,17 @@
             <p id="profileAbout"></p>
           </div>
         </div>
+        <div class="card box-shadow col-11 mb-20 flex justify-evenly">
+          <button class="btn" id="addPostButton">Add Blog Entry</button>
+          <button class="btn" id="addImageButton">Add Image</button>
+        </div>
       </div>
       <div class="col-8 row align-content-center justify-center">
         <div class="tab-container col-12 row" id="tabsContainer">
-          <div id="postsTab" data-content="posts" class="tab col-2 flex true-center active">Posts</div>
-          <div id="imageGalleryTab" data-content="imageGallery" class="tab col-2 flex true-center">Images</div>
+          <div id="postsTab" data-content="posts" class="tab box-shadow col-2 flex true-center active">Posts</div>
+          <div id="imageGalleryTab" data-content="imageGallery" class="tab box-shadow col-2 flex true-center">Images</div>
         </div>
-        <div class="col-12 card row p-20" id="contentContainer">
+        <div class="col-12 card box-shadow row p-20" id="contentContainer">
           <div id="posts" data-content="posts" class="col-12">
             <!-- EXAMPLE BLOG LIST ITEM -->
             <!--
@@ -57,17 +58,19 @@
   </main>
   <div class="modal-container hidden" id="modalContainer">
     <div class="modal" id="imageModal">
-      <div class="dismiss">X</div>
-      <form id="imageForm">
-        <input class="col-12" type="url" name="url" placeholder="Image Url">
-        <button class="btn">Submit</button>
+      <div class="dismiss">&times;</div>
+      <form class="row justify-end" id="imageForm">
+        <h3 class="col-12">Add An Image</h3>
+        <input class="col-12 image-input mb-20" type="url" name="url" placeholder="Image Url">
+        <button class="btn submit-btn">Submit</button>
       </form>
     </div>
     <div class="modal" id="postModal">
-      <div class="dismiss">X</div>
-      <form id="postForm">
-        <textarea class="col-12" name="body" placeholder="Post Body"></textarea>
-        <button class="btn">Submit</button>
+      <div class="dismiss">&times;</div>
+      <form class="row justify-end" id="postForm">
+        <h3 class="col-12">Add A Post</h3>
+        <textarea class="col-12 post-area mb-20" name="body" placeholder="Post Body"></textarea>
+        <button class="btn submit-btn">Submit</button>
       </form>
     </div>
   </div>
